@@ -1,0 +1,12 @@
+<!doctype html>
+<head>
+    <title>Пользователи</title>
+</head>
+
+<body>
+<h1>Спарсили пользователей</h1>
+<div>
+    {% for user in users %}
+    <p><a href="https://vk.com/{{user}}">vk.com/{{user}}</a></p>
+    {% endfor %}
+</div>

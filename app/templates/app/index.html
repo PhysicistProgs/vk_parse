@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+    <title>Пользователи</title>
+</head>
+
+<body>
+<div>
+    {% for user in users %}
+    <p><a href="https://vk.com/{{user}}">vk.com/{{user}}</a></p>
+    {% endfor %}
+</div>
+    <h1>
+        Все пользователи
+    </h1>
+
+<div>
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <table>
+        {{form.as_table}}
+</table>
+        <button type="submit" label="Спарсить">Спарсить</button>
+
+    </form>
+</div>
+</body>
